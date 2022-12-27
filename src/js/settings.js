@@ -1,7 +1,13 @@
 
 export const select = {
-    splash: {
+    temlateOf:{
         menuProduct: '#template-product',
+        aboutSection: '#template-section-about-us',
+    },
+    nav:{
+        links: '.main-nav a',
+    },
+    splash: {
         header: '#product__header',
         title: '#product__title',
         descrition: '#product__description',
@@ -10,18 +16,19 @@ export const select = {
         cards: '#pages',
         home: '#home',
         products: '#products',
-        contact: '#contact'
+        menu: '.product-list',
+        contact: '#contact',
     },
     selectionOf: {
         selection: '#product__selection',
         roasting: '#product__roasting',
         intensity: '#product__intensity'
     },
-
     aboutUs: {
         form: '#about__header',
-        title: '#about__title',
-        description: '#about__description'
+        title: '.about__title',
+        description: '.about__description',
+        postscript: '.about__postscript'
     }
 }
 
