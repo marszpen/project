@@ -1,13 +1,13 @@
 
 export const select = {
-    product: {
+    splash: {
         menuProduct: '#template-product',
         header: '#product__header',
         title: '#product__title',
         descrition: '#product__description',
     },
     containerOf: {
-        menu: '#product-list',
+        cards: '#pages',
         home: '#home',
         products: '#products',
         contact: '#contact'

@@ -11,13 +11,14 @@ class Product {
     }
     
     getElements(){
-        thisProduct.products = thisProduct.element.querySelektor(settings.title).innerHTML;
+        thisProduct.products = thisProduct.element.querySelektor(select.header.title).innerHTML;
+        thisProduct.card = thisProduct.element.querySelektor
     }
 
-    initOrder(){
+    initCard(){
         const thisProduct = this;
 
-        thisProduct.elemement.addEventListener('click', function(){
+        thisProduct.element.addEventListener('click', function(){
 
         })
     }
