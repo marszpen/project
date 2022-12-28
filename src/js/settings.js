@@ -15,7 +15,7 @@ export const select = {
     containerOf: {
         cards: '#pages',
         home: '#home',
-        products: '#products',
+        products: '#product',
         menu: '.product-list',
         contact: '#contact',
     },
