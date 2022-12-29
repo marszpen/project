@@ -13,10 +13,10 @@ export const select = {
         descrition: '#product__description',
     },
     containerOf: {
-        cards: '#pages',
+        cards: '#page',
         home: '#home',
         products: '#product',
-        menu: '.product-list',
+        menu: '#product-list',
         contact: '#contact',
     },
     selectionOf: {
@@ -30,8 +30,18 @@ export const select = {
         description: '.about__description',
         postscript: '.about__postscript'
     }
+};
+
+export const classNames = {
+    nav: {
+        active: 'active'
+    },
+
+    page: {
+        active: 'active'
+    }
 }
 
 export const templates = {
-    menuProduct: Handlebars.compile(document.querySelector(select.product.menuProduct).innerHTML),
+    menuProduct: Handlebars.compile(document.querySelector(select.containerOf.page).innerHTML),
 };

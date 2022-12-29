@@ -1,53 +1,14 @@
 'use strict';
 
-import { select, settings } from './settings.js'
-
-
-class Product {
-    constructor () {
-        const thisProduct = this;
-
-        thisProduct.initCard();
-    }
-    
-    getElements(){
-        thisProduct.card = thisProduct.element.querySelektor(select.containerOf.pages);
-        thisProduct.home = thisProduct.element.querySelektor(select.containerOf.home);
-        thisProduct.products = thisProduct.element.querySelektor(select.containerOf.products);
-        thisProduct.contact = thisProduct.element.querySelektor(select.containerOf.contact)
-    }
-
-    
-   
-    initCard(){
-        const thisProduct = this;
-
-        
-
-        thisProduct.element.addEventListener('click', function(){
-
-        })
-    }
-
-}
+import { select, classNames } from './settings.js'
+import Product from './components/Product.js';
 
 const app = {
-    initData: function() {
-        const url = settings.db.url + '/' + settings.db.products;
-        this.data = {};
-        fetch(url)
-            .then((rawResponse) => {
-                return rawResponse.json();
-            })
-            .then((parsedResponse) => {
-                this.data.products = parsedResponse;
-            });
-    },
 
     initPages: function(){
         const thisApp = this;
     
-        thisApp.pages = document.querySelector(select.containerOf.pages).children;//kontener stron, dzięki .children znajdzie się id = home id = products id = contact
+        thisApp.pages = document.querySelector(select.containerOf.cards).children;//kontener stron, dzięki .children znajdzie się id = home id = products id = contact
         thisApp.navLinks = document.querySelectorAll(select.nav.links);
         
         const idFromHash = window.location.hash.replace('#/', '');
@@ -73,7 +34,7 @@ const app = {
             /*run thisApp.activatePage wih that id */
             thisApp.activatePage(id);
     
-          /*change ORL hash */
+          /*change URL hash */
           window.location.hash = '#/' + id;
           });
         }
@@ -85,11 +46,11 @@ const app = {
         /*add class "active to matching pages, remove from non-matching" */
         for(let page of thisApp.pages){
         //if(page.id == pageId){
-        //  page.classList.add(classNames.pages.active);
+        //  page.classList.add(classNames.page.active);
         //}else{
-        //  page.classList.remove(classNames.pages.active);
+        //  page.classList.remove(classNames.page.active);
         //}
-        page.classList.toggle(classNames.pages.active, page.id == pageId);
+        page.classList.toggle(classNames.page.active, page.id == pageId);
         }
         /*add class "active to matching links, remove from non-matching" */
         for(let link of thisApp.navLinks){
@@ -99,6 +60,27 @@ const app = {
             );
         }
       },
+
+    initMenu: function(){
+        const thisApp = this; 
+        console.log('thisApp.data:', thisApp.data);
+    
+        for(let productData in thisApp.data.products){ 
+          new Product (productData, thisApp.data.products[productData]);
+        }
+      },
+
+    initData: function() {
+        const url = settings.db.url + '/' + settings.db.products;
+        this.data = {};
+        fetch(url)
+            .then((rawResponse) => {
+                return rawResponse.json();
+            })
+            .then((parsedResponse) => {
+                this.data.products = parsedResponse;
+            });
+    },
 
     init: function() {
         const thisApp = this;

@@ -1,7 +1,58 @@
-.container {
+$color-gold: #BEA67C;
+$color-white: #FFF;
+$color-black: #000;
+$font-main: 'Source Sans Pro', sans-serif;
 
+body {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: $font-main;
 }
 
-.page{
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
+section {
+    padding: 100vh, 0;
+}
+
+// Header
+.header-inner {
+    height: 100vh;
+    position: relative;
+    background-image: "image";
+       src: url('images/background') format('png');
+    background-position: center center;
+    background-size: cover;
+}
+
+.header_wrapper {
+    position: absolute;
+    justify-content: space-between;
+    font-family: $font-main;
+    color: $color-black; //white
+}
+
+.splash-inner{
+    position: absolute;
+    text-align: center;
+}
+
+.page-title:after {
+    position: absolute;
+    content: '';
+    bottom: -5px;
+    left: 50%;
+    width: 100px;
+    height: 2px;
+    transform: translateX(-50%);
+    background: $color-gold;
+}
+
+.row {
+    display: flex;
 }

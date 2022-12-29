@@ -8,6 +8,7 @@
 @import "bootstrap/utilities";
 @import "bootstrap/grid";
 
+
 // variables
 @import "variables";
 
@@ -16,16 +17,10 @@
 @import "global";
 @import "typography";
 
-//icons
+// icons
 @import "icons";
 
+// navbar
+@import "bootstrap/navbar";
+@import "bootstrap/nav";
 
-//Splash
-.splash-inner {
- background-image: "image";
-    src: url('../images/background') format('png')
-}
-
-.row {
-    display: flex;
-}
