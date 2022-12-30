@@ -1,6 +1,6 @@
 
 export const select = {
-    temlateOf:{
+    templateOf:{
         product: '#template-product',
         aboutSection: '#template-product , #template-section-about-us',
         contact: "template-contact",
@@ -52,7 +52,7 @@ export const settings = {
 }
 
 export const templates = {
-    product: Handlebars.compile(document.querySelector(select.templateOf.paroduct).innerHTML),
+    product: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
     home: Handlebars.compile(document.querySelector(select.templateOf.page).innerHTML),
     contact: Handlebars.compile(document.querySelector(select.templateOf.page).innerHTML),
 };

@@ -33,12 +33,7 @@ section {
 .header_wrapper {
     position: absolute;
     justify-content: space-between;
-    font-family: $font-main;
-    color: $color-black; //white
-}
-
-.splash-inner{
-    position: absolute;
+    color: $color-black; //white;
     text-align: center;
 }
 
@@ -58,7 +53,6 @@ section {
 .product body{
     [class^="product-"] {
         position: relative;
-        font-family: $font-main;
 }
 }
 
@@ -72,9 +66,8 @@ section {
 }
 
 
-
 .page-footer {
-    position: absolute;
+    text-align: center; 
 }
 .col {
     display: block;
