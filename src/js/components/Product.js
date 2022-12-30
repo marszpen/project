@@ -1,4 +1,4 @@
-import {select} from './setting.js';
+import {select, templates} from './settings.js';
 import utils from './utils.js';
 
 class Product {
@@ -8,14 +8,15 @@ class Product {
         thisProduct.id = id;
         thisProduct.data = data;
 
-        thisProduct.initCard();
+        thisProduct.renderInMenu();
+        thisProduct.getElements();
     }
 
     renderInMenu(){
         const thisProduct = this;//renderowanie produktów na stronie
   
         /* generate HTML based on template */
-        const generatedHTML = templates.menuProduct(thisProduct.data);
+        const generatedHTML = templates.product(thisProduct.data);
         //console.log(this);
         /* create element using utils.createElementFromHTML -tworzenie lementu DOM*/ 
         thisProduct.element = utils.createDOMFromHTML(generatedHTML);
@@ -26,7 +27,7 @@ class Product {
   
       }
     getElements(){
-        thisProduct.card = thisProduct.element.querySelektor(select.containerOf.pages);
+        thisProduct.card = thisProduct.element.querySelektor(select.containerOf.cards);
         thisProduct.home = thisProduct.element.querySelektor(select.containerOf.home);
         thisProduct.products = thisProduct.element.querySelektor(select.containerOf.products);
         thisProduct.contact = thisProduct.element.querySelektor(select.containerOf.contact)

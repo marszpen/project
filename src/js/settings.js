@@ -1,8 +1,9 @@
 
 export const select = {
     temlateOf:{
-        menuProduct: '#template-product',
-        aboutSection: '#template-section-about-us',
+        product: '#template-product',
+        aboutSection: '#template-product , #template-section-about-us',
+        contact: "template-contact",
     },
     nav:{
         links: '.main-nav a',
@@ -36,12 +37,22 @@ export const classNames = {
     nav: {
         active: 'active'
     },
-
     page: {
         active: 'active'
     }
 }
 
+export const settings = {
+    db: {
+        url: '//localhost:3131',
+        products: 'products',
+        home: 'home',
+        contact: 'contact'
+    }
+}
+
 export const templates = {
-    menuProduct: Handlebars.compile(document.querySelector(select.containerOf.page).innerHTML),
+    product: Handlebars.compile(document.querySelector(select.templateOf.paroduct).innerHTML),
+    home: Handlebars.compile(document.querySelector(select.templateOf.page).innerHTML),
+    contact: Handlebars.compile(document.querySelector(select.templateOf.page).innerHTML),
 };
