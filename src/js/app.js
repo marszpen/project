@@ -1,5 +1,6 @@
-import {select, classNames} from './settings.js'
+import {select, classNames, settings} from './settings.js'
 import Product from './Product.js';
+import Home from './Home.js';
 
 const app = {
 
@@ -72,14 +73,23 @@ const app = {
       })
       .then((parsedResponse) => {
         this.data.products = parsedResponse;
+        this.initMenu();
       });
   },
+
+  initHome: function () {
+    const thisApp = this;
+    const homeElem = document.querySelector(select.containerOf.home);
+    thisApp.homeElem = new Home(homeElem);
+  },
+
 
   init: function () {
     const thisApp = this;
     
     thisApp.initData();
     thisApp.initPages();
+    thisApp.initHome();
   },
 }
 

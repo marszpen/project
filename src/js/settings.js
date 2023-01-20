@@ -2,11 +2,12 @@
 export const select = {
     templateOf:{
         product: '#template-product',
-        aboutSection: '#template-product , #template-section-about-us',
-        contact: "template-contact",
+        aboutSection: '#template-section-about-us',
+        contact: "#template-contact",
     },
     nav:{
         links: '.main-nav a',
+        homeHeader: '.container',
     },
     splash: {
         header: '#product__header',
@@ -19,6 +20,7 @@ export const select = {
         products: '#product',
         menu: '#product-list',
         contact: '#contact',
+        homeWrapper: '.home-wrapper',
     },
     selectionOf: {
         selection: '#product__selection',
@@ -31,7 +33,7 @@ export const select = {
         description: '.about__description',
         postscript: '.about__postscript'
     }
-};
+}
 
 export const classNames = {
     nav: {
@@ -53,6 +55,6 @@ export const settings = {
 
 export const templates = {
     product: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
-    home: Handlebars.compile(document.querySelector(select.templateOf.page).innerHTML),
-    contact: Handlebars.compile(document.querySelector(select.templateOf.page).innerHTML),
+    home: Handlebars.compile(document.querySelector(select.templateOf.aboutSection).innerHTML),
+    contact: Handlebars.compile(document.querySelector(select.templateOf.contact).innerHTML),
 };
