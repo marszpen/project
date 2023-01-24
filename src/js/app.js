@@ -1,6 +1,7 @@
-import {select, classNames, settings} from './settings.js'
+import {select, classNames, settings} from './settings.js';
 import Product from './Product.js';
 import Home from './Home.js';
+import Contact from './Contact.js';
 
 const app = {
 
@@ -21,7 +22,7 @@ const app = {
       }
     }
 
-    thisApp.activatePage(idFromHash);
+    thisApp.activatePage(pageMatchingHash);
 
     for (let link of thisApp.navLinks) {
       link.addEventListener('click', function (event) {
@@ -29,7 +30,7 @@ const app = {
         event.preventDefault;
 
         /*get page id from href attribute */
-        const id = clickedElement.getAtribute('href').replace('#', '');
+        const id = clickedElement.getAttribute('href').replace('#', '');
         /*run thisApp.activatePage wih that id */
         thisApp.activatePage(id);
 
@@ -59,8 +60,8 @@ const app = {
     const thisApp = this;
     console.log('thisApp.data:', thisApp.data);
 
-    for (let productData in thisApp.data.products) {
-      new Product(productData, thisApp.data.products[productData]);
+    for (let productData of thisApp.data.products) {
+      new Product(productData.id, productData);
     }
   },
 
@@ -83,6 +84,11 @@ const app = {
     thisApp.homeElem = new Home(homeElem);
   },
 
+  initContact: function () {
+    const thisApp = this;
+    const contactElem = document.querySelector(select.containerOf.contact);
+    thisApp.contactElem = new Contact(contactElem);
+  },
 
   init: function () {
     const thisApp = this;
@@ -90,7 +96,8 @@ const app = {
     thisApp.initData();
     thisApp.initPages();
     thisApp.initHome();
+    thisApp.initContact();
   },
-}
+};
 
 app.init();

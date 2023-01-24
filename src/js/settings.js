@@ -2,7 +2,7 @@
 export const select = {
     templateOf:{
         product: '#template-product',
-        aboutSection: '#template-section-about-us',
+        home: '#template-home',
         contact: "#template-contact",
     },
     nav:{
@@ -15,12 +15,13 @@ export const select = {
         descrition: '#product__description',
     },
     containerOf: {
-        cards: '#page',
+        cards: '#pages',
         home: '#home',
         products: '#product',
-        menu: '#product-list',
+        menu: '.products-list',
         contact: '#contact',
         homeWrapper: '.home-wrapper',
+        contactWrapper: '.contact-wrapper',
     },
     selectionOf: {
         selection: '#product__selection',
@@ -48,13 +49,11 @@ export const settings = {
     db: {
         url: '//localhost:3131',
         products: 'products',
-        home: 'home',
-        contact: 'contact'
     }
 }
 
 export const templates = {
     product: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
-    home: Handlebars.compile(document.querySelector(select.templateOf.aboutSection).innerHTML),
+    home: Handlebars.compile(document.querySelector(select.templateOf.home).innerHTML),
     contact: Handlebars.compile(document.querySelector(select.templateOf.contact).innerHTML),
 };

@@ -2,18 +2,19 @@ import { select, templates } from './settings.js';
 import utils from './utils.js';
 
 class Home {
-    constructor () {
+    constructor (element) {
        const thisHome = this;
 
-       thisHome.getElements();
+       thisHome.getElements(element);
        thisHome.render();
 
     }
-    getElements() {
+
+    getElements(element) {
         const thisHome = this;
 
-        thisHome.dom.homeHeader = document.querySelector(select.nav.homeHeader);
-
+        thisHome.dom = {};
+        thisHome.dom.wrapper = element;
     }
     render() {
         const thisHome = this;
@@ -24,4 +25,5 @@ class Home {
         homeContainer.appendChild(thisHome.element);
     }
 }
-export default Home
+
+export default Home;
