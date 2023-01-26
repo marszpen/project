@@ -16,7 +16,7 @@
   <header class="header">
     <div class="container">
       <div class="header_wrapper">
-        <div class="brand">
+        <div class="navbar-brand" href="#">
           <h3 class="brand__title">EL TIGRE</h3>
           <h4 class="brand__subtitle fw-light">VENEZUELA COFFE BEANS</h4>
         </div>
@@ -36,8 +36,10 @@
           <div class="splash-inner">
             <h1 class="page-title">HOME OF</h1>
             <h1 class="page-title2">ORIGINAL TASTES</h1>
-            <h4 class="page-subtitle">DISCOVER</h4>
-            <i class="fa-regular fa-circle-down"></i>
+            <div class="page_discover">
+              <h2 class="page-subtitle">DISCOVER</h2>
+              <i class="fa-regular fa-circle-down"></i>
+            </div>
           </div>
         </div>
       </header>
@@ -70,10 +72,10 @@
 
   <script id="template-product" type="text/x-handlebars-template">
     <div class="product__header">
-      <div class="py-5">
+      <div class="container py-5">
         <div class="card mb-3 justify-content-center align-items-center">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-sm">
             <div class="product-body">
               <div class="product-text">
                 <h3 class="product__title">{{ title }}</h3>
@@ -82,30 +84,28 @@
                 </div>
                 <ul class="product__selection">
                   <li>
-                    <h4 class="product__roasting">{{ roasting }}</h4>
+                    <h4 class="product__roasting">{{ roasting }} {{ roastingNumber }}</h4>
                   </li>
                   <li>
-                    <h4 class="product__intensity">{{ intensity }}</h4>
+                    <h4 class="product__intensity">{{ intensity }} {{ intensityNumber }} </h4>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="product__images">
-              <img class="product__image" src="./images/{{ image }}" alt="product image">
-            </div>
-          </div>
+          <div class="col-lg-6 col-sm">
+            <img class="product__images" src="./images/{{ image }}" alt="product image">
         </div>
         </div>
       </div>
     </div>
+  </div>
   </script>
 
   <script id="template-products" type="text/x-handlebars-template">
-    <div class="products">
+    <div class="products"> 
       <h1>
-        Products
+        PRODUCTS
       </h1>
       <ul class="products-list">
       </ul>
@@ -121,30 +121,27 @@
         <ul class="products-list">
         </ul>
       </div>
-      <div class="about_us">
-        <header class="about__header">
-          <h3 class="about__title">About us</h3>
-          <div class="line"></div> <!--linia-->
+      <header class="about__header">
+        <div class="container_about">
+          <h3 class="about__title">ABOUT US</h3>
           <div class="about__description">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-              scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-              Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-              Aldus PageMaker including versions of Lorem Ipsum.</p>
-          </div>
-          <div class="about__postscript">
-            <figcaption>John Doe</figcaption>
-          </div>
-        </header>
-      </div>
+            <blockquote class="blockquote">
+              <p>Who are we? Just a banch with a love fr a good coffe and desire to create something new,
+                something original. <br>Our coffe reflect us - youn, wild and free.<br>We are on the journey of new testes...
+              </p>
+                <div class="about__postscript">
+                <figcaption>Join us!</figcaption>
+              </div>  
+            </blockquote>
+        </div>
+      </header>
     </div>
   </script>
 
   <script id="template-contact" type="text/x-handlebars-template">
     <div class="contact">
     <header class="contact__header">
-      <h3 class="contact__title">CONTACT</h3>
+      <h3 class="contact__title">CONTACT US</h3>
     </header>
     <div class="name-option">
       <label class="name__label">NAME</label>

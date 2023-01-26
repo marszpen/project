@@ -1,79 +1,10 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  $color-gold: #BEA67C;
+  $color-white: #FFF;
+  $color-black: #000;
+  $font-main: 'Source Sans Pro', sans-serif;
 
-//Header
-.main-nav a {
-    text-decoration: none;
-    color: white; //$color-white;
-    justify-content: space-evenly;
-}
-
-.page-title2 {
-    position: relative;
-    text-indent: 40px;
-    line-height: 1px;
-    text-align: center;
-}
-.page-title2::after {
-    position: absolute;
-    content: '';
-    bottom: -5px;
-    left: 50%;
-    width: 150px;
-    height: 4px;
-    background: #BEA67C; 
-    }
-    
-//Products
-.products h1 {
-    position: relative;
-    color: #BEA67C; //$color-gold
-    text-align: center;
-}
-.products h1::after {
-    position: absolute;
-    content: '';
-    bottom: -5px;
-    left: 43%;
-    width: 100px;
-    height: 2px;
-    background: #BEA67C; 
-    text-align: center;
-}
-
-//Product
-.product-title {
-    position: relative;
-}
-    
-.product__selection {
-    list-style-type: none;
-}
-
-.product-title::after {
-    position: absolute;
-    content: '';
-    bottom: -5px;
-    left: 50%;
-    width: 100px;
-    height: 2px;
-    background: #BEA67C; 
-    text-align: center;
-}
-
-
-//About us
-.about__title {
-    position: relative;
-    color: #BEA67C;; //$color-gold
-    text-align: center;
-}
-.about__title::after {
-    position: absolute;
-    content: '';
-    bottom: -5px;
-    left: 50%;
-    width: 100px;
-    height: 2px;
-    transform: translateX(-50%);
-    background: #BEA67C; 
-    text-align: center;
-    }

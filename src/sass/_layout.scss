@@ -4,14 +4,13 @@
     background-image: url('../images/background.png');
     background-size: cover;
     height: 100vh;
-    filter: brightness(50%);
 }
 
 .header_wrapper {
     position: relative;
     display: flex;
     justify-content: space-between; 
-    color: white;//$color-white;
+    color: $color-white;
 }
 
 .brand__title {
@@ -29,13 +28,16 @@
 }
 
 .splash i {
-    color: #BEA67C; 
+    color: $color-gold; 
     text-align: center;
+    font-size: 22px;
 }
 
 .page-subtitle {
     text-align: center;
-    padding: 30%;
+    padding-top: 15%;
+    top: 300px;
+    font-size: 22px;
 }
 
 
@@ -52,15 +54,32 @@
 
 .product-text product-title {
     padding: 36px 0 36px 55%;
-    text-align: left; 
+    text-align: left;
 }
 
 .product__description {
-    overflow: hidden;
+    display: flex;
+}
+.product__description p {
+    margin: 0px 5px;
+}
+
+.product__description:before {
+    content: '';
+    width: 100px;
+    height: 3px;
+    background: $color-gold;
+    display: inline-block;
 }
 
 .product__selection{
     padding: 0;
+    display: block;
+}
+
+.product__images{
+    box-shadow: 0 0 48px 1px rgba(0, 0, 0, 0.5);
+    background-size: cover;
 }
 
 .page-footer {
@@ -75,26 +94,34 @@
 #pages > * {
     display: none;
 }
+
 #pages > .active {
     display: block;
 }
-
 
 //About us
 
 .about__header {
     background-image: url('../images/about-us.jpg');
     background-size: cover;
-    width: 100vw;
-    filter: brightness(50%);
 }
 
 .about__description {
     display: flex;
     justify-content: space-between;
-    color: white; //$color-white
+    color: $color-white;
+    padding-right: 65px;
+    padding-left: 65px;
 }
+
+.about__description p {
+    padding: 0;
+    overflow: hidden;
+}
+
 .about__postscript {
-    color: white; //$color-white
+    color: $color-white;
     text-align: right;
 }
+
+// Contact us
