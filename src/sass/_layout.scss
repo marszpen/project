@@ -100,10 +100,22 @@
 }
 
 //About us
+.home-wrapper {
+    position: relative;
+}
 
+.main-nav {
+    display: block;
+}
+
+.splash-inner {
+    
+}
 .about__header {
     background-image: url('../images/about-us.jpg');
     background-size: cover;
+    position: absolute;
+    width: 100%;
 }
 
 .about__description {
@@ -124,4 +136,3 @@
     text-align: right;
 }
 
-// Contact us

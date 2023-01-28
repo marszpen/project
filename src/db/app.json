@@ -7,7 +7,7 @@
             "image": "coffee-1.png",
             "roasting": "ROASTING: ",
             "roastingNumber": "5/10",
-            "intensity": "INTENSITY",
+            "intensity": "INTENSITY: ",
             "intensityNumber": "6/10"
         },
         {
@@ -17,7 +17,7 @@
             "image": "coffee-2.png",
             "roasting": "ROASTING: ",
             "roastingNumber": "8/10",
-            "intensity": "INTENSITY",
+            "intensity": "INTENSITY: ",
             "intensityNumber": "9/10"
         },
         {
@@ -27,7 +27,7 @@
             "image": "coffee-3.png",
             "roasting": "ROASTING: ",
             "roastingNumber": "3/10",
-            "intensity": "INTENSITY",
+            "intensity": "INTENSITY: ",
             "intensityNumber": "7/10"
         }
     ]

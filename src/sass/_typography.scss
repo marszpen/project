@@ -58,6 +58,9 @@
     
 .product__selection {
     list-style-type: none;
+    & span {
+        color: $color-gold;
+    };
 }
 
 .product-title::after {

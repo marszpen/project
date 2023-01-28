@@ -16,9 +16,18 @@ section {
 }
 
 @media (max-width: 700px) {
+  .page-title2 {
+    line-height: initial;
+  }
+
   .header_wrapper{
     flex-direction: column; 
     }
+
+    .product__header:nth-of-type(2n) .col-lg-6:first-of-type {
+    display: flex;
+    order: initial;
+  }
 
   .product-text {
       max-width: 100%;
@@ -32,5 +41,12 @@ section {
   .products .products-list{
     margin-top: 50px; 
   }
-}
 
+  .product__roasting {
+    line-height: normal;
+  }
+
+  .contact-wrapper {
+    text-align: center;
+  }
+}
