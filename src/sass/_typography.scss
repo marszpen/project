@@ -46,10 +46,6 @@
 }
 
 //Product
-.product__header:nth-of-type(2n) .col-lg-6:first-of-type {
-    order: 1;
-}
-
 .product__title {
     position: relative;
     font-size: 20px;
@@ -78,8 +74,8 @@
     word-spacing: 2px;
 }
 
-.product__roasting:nth-child(2n) {
-    color: $color-gold;
+.product__roasting:nth-child(2n) .col-lg-6:first-of-type{
+    order: 0;
 }
 
 .product__roasting {
@@ -166,4 +162,10 @@ button {
 
 .name-option {
     margin: 5px;
+}
+
+@media (max-width: 700px) {
+    .page-title2 {
+        line-height: initial;
+      }
 }
